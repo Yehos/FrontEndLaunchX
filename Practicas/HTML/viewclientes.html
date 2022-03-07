@@ -1,103 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout y Rutas</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<html>
+  <head>
+    
+    <title>Ma Fille Pastelery</title>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* Estilo de header */
-        header {
-            background-color: #666;
-            padding: 30px;
-            text-align: center;
-            font-size: 35px;
-            color: white;
-        }
-
-        /* Crear 2 columnas con la misma posición en la fila */
-        nav {
-            float: left;
-            width: 30%;
-            height: 300px;
-            /* only for demonstration, should be removed */
-            background: #ccc;
-            padding: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        article {
-            float: left;
-            padding: 20px;
-            width: 70%;
-            background-color: #f1f1f1;
-            height: 300px;
-        }
-
-        /* Clear floats after the columns */
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Estilo de footer */
-        footer {
-            background-color: #777;
-            padding: 10px;
-            text-align: center;
-            color: white;
-        }
-
-        /* Responsive layout */
-        @media (max-width: 600px) {
-
-            nav,
-            article {
-                width: 100%;
-                height: auto;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body background="https://static.vecteezy.com/system/resources/previews/000/056/860/original/cherry-blossom-wallpaper-vector.jpg"  >
     <header>
-        <h2>Ciudades</h2>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../main.html">
+          <img src="Logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Ma Fille
+        </a>
+        <a class="navbar-brand" href="../aboutUs.html">
+          <button src="" width="30" height="30" class="d-inline-block align-top" alt=""></button>
+          Sobre Nosotros
+        </a>
+        <a class="navbar-brand" href="../formulario.html">
+          <button src="" width="30" height="30" class="d-inline-block align-top" alt=""></button>
+          Crea tu Cuenta
+        </a>
+        <a class="navbar-brand" href="../viewIngresar.html">
+          <button src="" width="30" height="30" class="d-inline-block align-top" alt=""></button>
+          Inicia Sesion
+        </a>
+      </nav>
     </header>
-
-    <section>
-        <nav>
+    <table align="center" border="1">
+        <tr>
+          <td style="color: black">Tipo de Pan</td>
+          <br />
+          <td style="color: black">Relleno</td>
+          <br />
+          <td style="color: black">Cubierta</td>
+          <br />
+          <td style="color: black">Extras</td>
+          <br />
+        </tr>
+        <tr>
+            <td style="color: black">
+                <ul>
+                <li><input type="radio" name="relleno" value="mantequilla">Mantequilla</li>
+                <li><input type="radio" name="relleno" value="choco">Chocolate</li>
+                <li><input type="radio" name="relleno" value="vainilla">vainilla</li>
+                </ul>
+            </td>        <td style="color: black">
             <ul>
-                <li><a href="#">Londres</a></li>
-                <li><a href="#">Paris</a></li>
-                <li><a href="#">Tokyo</a></li>
+            <li><input type="radio" name="relleno" value="fresa">Fresa</li>
+            <li><input type="radio" name="relleno" value="choco">Chocolate</li>
+            <li><input type="radio" name="relleno" value="avellana">Crema de avellana</li>
+            <li><input type="radio" name="relleno" value="durasno">Durasno</li>
+            <li><input type="radio" name="relleno" value="chanti">Chantilli</li>
             </ul>
-        </nav>
-
-        <article>
-            <h1>Londres</h1>
-            <p>Londres es la capital de Inglaterra y es la ciudad más popular del Reino Unido, es la ciudad mas poblada con 13 millones de habitantes en su área metropolitana</p>
-        </article>
-    </section>
+        </td>
+      <td style="color: black">
+        <ul>
+          <li><input type="radio" name="cubierta" value="fresa">Fresa</li>
+          <li><input type="radio" name="cubierta" value="choco">Chocolate</li>
+          <li><input type="radio" name="cubierta" value="vainilla">Vainilla</li>
+        </ul>
+      </td>
+      <br />
+      <td style="color: black">
+        <ul>
+          <li><input type="radio" name="extra" value="nuez">Nuez</li>
+          <li><input type="radio" name="extra" value="nuez">Fruta</li>
+          <li><input type="radio" name="extra" value="nuez">Chispas de chocolate</li>
+        </ul>
+      </td>
+      <br/>
+    </body>
 
     <footer>
-        <p>Footer</p>
+        <input align="center" type="submit" value="Realizar Pedido">
     </footer>
-
-</body>
-
 </html>
